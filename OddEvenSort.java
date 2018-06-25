@@ -1,11 +1,7 @@
 public class OddEvenSort {
 
     public int[] sort(int[] arr) {
-        boolean sorted = false;
-        while(!sorted) {
-            sortHelper(arr, 0);
-            sorted = sortHelper(arr, 1);
-        }
+        for (boolean sorted = false; !sorted; sortHelper(arr, 0), sorted = sortHelper(arr, 1));
 
         return arr;
     }
